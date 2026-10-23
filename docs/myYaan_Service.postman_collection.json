@@ -1,0 +1,1717 @@
+{
+	"info": {
+		"_postman_id": "b87e769e-5ce6-4524-b71f-15cb30a95829",
+		"name": "myYaan_Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ServicePartner",
+			"item": [
+				{
+					"name": "Service_Partner_OnBoarding",
+					"item": [
+						{
+							"name": "Get_Service_Center_Address_Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 4397e0143429dc7b06761111d1c0cf829fabedf5c4407e3844a3acbbff7c5132",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/service-partners/service-centre-address",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"service-partners",
+										"service-centre-address"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save_ServiceCentre_Address_Details",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer bdbb0e08d7278074fdf6494b2dbfd17c77e65a58dd274eb9ed190cb80d46842d",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceCenterName\": \"MyYaan Service Centre\",\n  \"addressLine1\": \"123 Main Road\",\n  \"addressLine2\": \"Near City Mall\",\n  \"city\": \"Delhi\",\n  \"state\": \"Delhi\",\n  \"pincode\": \"110001\",\n  \"latitude\": 28.6139,\n  \"longitude\": 77.209,\n  \"serviceCenterPicUrl\": \"https://storage.example.com/centre.jpg\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/service-partners/service-centre-address",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"service-partners",
+										"service-centre-address"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_ServicePartner_OnBoardingStatus",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 1b97c2a59acf19d86ebc87711a1056b7496302c39bf63396ad0f8aab44a3dc3b",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/service-partners/onboarding",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"service-partners",
+										"onboarding"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_ServicePartner_PersonalDetails",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 1b97c2a59acf19d86ebc87711a1056b7496302c39bf63396ad0f8aab44a3dc3b",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/service-partners/personal-details",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"service-partners",
+										"personal-details"
+									],
+									"query": [
+										{
+											"key": "Authorization",
+											"value": "Bearer 1b97c2a59acf19d86ebc87711a1056b7496302c39bf63396ad0f8aab44a3dc3b",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_ServiceList_Data",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 3a939a3ed57639327d51584065468c7ae03399add11858db754c7f413beb5744",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/service-partners/services",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"service-partners",
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update_Partner_Service_Details",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 16e2f20ee2ee3adaa89051a65c42982b4b28b9e3d2a5c18750a19f48f594dad7",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceCenterId\": 1,\n  \"services\": [\n    {\n      \"serviceId\": 6,\n      \"subServiceIds\": [18]\n    },\n    {\n      \"serviceId\": 4,\n      \"subServiceIds\": [10, 11]\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/service-partners/services",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"service-partners",
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_Service_Partner_Service_Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 3a939a3ed57639327d51584065468c7ae03399add11858db754c7f413beb5744",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/service-partners/services?serviceCenterId=4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"service-partners",
+										"services"
+									],
+									"query": [
+										{
+											"key": "serviceCenterId",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "HomeScreen_Api's",
+					"item": [
+						{
+							"name": "http://localhost:3001/api/service-partners/home/services",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 3a939a3ed57639327d51584065468c7ae03399add11858db754c7f413beb5744",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/service-partners/home/services",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"service-partners",
+										"home",
+										"services"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "SideMenu_Option",
+					"item": [
+						{
+							"name": "Set_Pricing_Module",
+							"item": [
+								{
+									"name": "Get_Vehicle_Pricing",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer 3a939a3ed57639327d51584065468c7ae03399add11858db754c7f413beb5744",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3001/api/service-partners/pricing/catalog?vehicleCategory=CAR&serviceId=5",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3001",
+											"path": [
+												"api",
+												"service-partners",
+												"pricing",
+												"catalog"
+											],
+											"query": [
+												{
+													"key": "vehicleCategory",
+													"value": "CAR"
+												},
+												{
+													"key": "serviceId",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get_Service_Vehicle_Support",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer 3a939a3ed57639327d51584065468c7ae03399add11858db754c7f413beb5744",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3001/api/service-partners/service-vehicle-support?serviceCenterId=4&serviceId=2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3001",
+											"path": [
+												"api",
+												"service-partners",
+												"service-vehicle-support"
+											],
+											"query": [
+												{
+													"key": "serviceCenterId",
+													"value": "4"
+												},
+												{
+													"key": "serviceId",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get_Bike_Car_Companies_List",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer 3a939a3ed57639327d51584065468c7ae03399add11858db754c7f413beb5744",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3001/api/service-partners/vehicle-companies?vehicleCategory=BIKE",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3001",
+											"path": [
+												"api",
+												"service-partners",
+												"vehicle-companies"
+											],
+											"query": [
+												{
+													"key": "vehicleCategory",
+													"value": "BIKE"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Get_Car/Bike_Companies_List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 3a939a3ed57639327d51584065468c7ae03399add11858db754c7f413beb5744",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/service-partners/vehicle-companies?vehicleCategory=BIKE&serviceId=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"service-partners",
+										"vehicle-companies"
+									],
+									"query": [
+										{
+											"key": "vehicleCategory",
+											"value": "BIKE"
+										},
+										{
+											"key": "serviceId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update_Car/Bike_Companies_List",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 3a939a3ed57639327d51584065468c7ae03399add11858db754c7f413beb5744",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceId\": 2,\n  \"vehicleSupports\": [\n    {\n      \"vehicleCategory\": \"BIKE\",\n      \"companyIds\": [4, 1],\n      \"tyreTypes\": []\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/service-partners/service-vehicle-support",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"service-partners",
+										"service-vehicle-support"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_Vehicle_Sub_Service_Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 3a939a3ed57639327d51584065468c7ae03399add11858db754c7f413beb5744",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/service-partners/service-vehicle-support?serviceId=6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"service-partners",
+										"service-vehicle-support"
+									],
+									"query": [
+										{
+											"key": "serviceId",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Verify_Otp_Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"mobile\": \"9045180123\",\n  \"otp\": \"514310\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/service-partners/verify-otp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"service-partners",
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateDevice_Details",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 85299926de57b4196b92aba1cafcda6292ef014162806a234aa11bb85280bfb0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": 5,\n  \"deviceToken\": \"550e8400-e29b-41d4-a716-446655440000\",\n  \"deviceType\": \"android\",\n  \"deviceName\": \"Samsung Galaxy S24\",\n  \"appVersion\": \"1.0.0\",\n  \"buildNumber\": 1,\n  \"notificationsEnabled\": true\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/devices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServicePartner_RequestOtp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mobile\": \"9045180123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.myyaan.com/api/service-partners/request-otp",
+							"protocol": "http",
+							"host": [
+								"api",
+								"myyaan",
+								"com"
+							],
+							"path": [
+								"api",
+								"service-partners",
+								"request-otp"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User App Api's List",
+			"item": [
+				{
+					"name": "User_Vehicle_Info",
+					"item": [
+						{
+							"name": "Get_Vehicle_Type",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/users/vehicle-types",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"vehicle-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_CompanyList_Car_Bike",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/users/vehicle-companies?vehicleType=Car",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"vehicle-companies"
+									],
+									"query": [
+										{
+											"key": "vehicleType",
+											"value": "Car"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_Vehicle_Model_Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/users/vehicle-models?vehicleType=CAR&companyId=7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"vehicle-models"
+									],
+									"query": [
+										{
+											"key": "vehicleType",
+											"value": "CAR"
+										},
+										{
+											"key": "companyId",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_Vehicle_Company_List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/users/vehicle-models?vehicleType=ELECTRIC_CAR&companyId=8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"vehicle-models"
+									],
+									"query": [
+										{
+											"key": "vehicleType",
+											"value": "ELECTRIC_CAR"
+										},
+										{
+											"key": "companyId",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_All_Bike_Model_Without_CompanyId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/users/vehicle-models?vehicleType=BIKE",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"vehicle-models"
+									],
+									"query": [
+										{
+											"key": "vehicleType",
+											"value": "BIKE"
+										},
+										{
+											"key": "companyId",
+											"value": "4",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_User_Saved_Vehicle_Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/users/vehicle-details",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"vehicle-details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put_User_Vehicle_Details",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"vehicleType\": \"CAR\",\n  \"companyId\": 7,\n  \"modelId\": 42,\n  \"vehicleNumber\": \"DL 01 AB 1124\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/users/vehicle-details",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"vehicle-details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update/Edit_User_Vehicle_Details",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n            \"vehicleType\": \"BIKE\",\n            \"vehicleNumber\": \"DL01AB1234\",\n            \"isPrimary\": true,\n            \"companyId\": 4,\n            \"modelId\": 22\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/users/vehicle-details/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"vehicle-details",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_User_Vehicle_Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/users/vehicle-details",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"vehicle-details"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "UserLoginApi's",
+					"item": [
+						{
+							"name": "Verfify_Users_Otp_Value",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"mobile\": \"9045180120\",\n    \"otp\": \"879089\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/users/verify-otp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"verify-otp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Normal_User_Request_Otp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"mobile\": \"9045180120\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/users/request-otp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"request-otp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateDevice_Details_User",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 85299926de57b4196b92aba1cafcda6292ef014162806a234aa11bb85280bfb0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userId\": 5,\n  \"deviceToken\": \"550e8400-e29b-41d4-a716-446655440000\",\n  \"deviceType\": \"android\",\n  \"deviceName\": \"Samsung Galaxy S24\",\n  \"appVersion\": \"1.0.0\",\n  \"buildNumber\": 1,\n  \"notificationsEnabled\": true\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/devices",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"devices"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update_User_Profile",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 1742dfb041da39bb6461618459c8ea7aaa249deaf25abd0bd34d73cdbabacce6",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"profilePicUrl\": \"https://storage.example.com/profile.jpg\",\n  \"firstName\": \"Ayush\",\n  \"lastName\": \"Bansal\",\n  \"email\": \"ayush11@example.com\",\n  \"alternativeMobile\": \"9876543211\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/users/profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_User_Profile_Data",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 1742dfb041da39bb6461618459c8ea7aaa249deaf25abd0bd34d73cdbabacce6",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/users/profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update_User_Device_Details",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer ac9b240745d444acf4f8ecb410abe91f777edf3027d3492cb746c7856faa086d",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userId\": 11,\n  \"deviceToken\": \"507EF55C-B9CC-4EB2-885E-A4C9453A5568\",\n  \"deviceType\": \"iOS\",\n  \"deviceName\": \"iPhone 16 Pro Max\",\n  \"appVersion\": \"1.0.0\",\n  \"buildNumber\": 1,\n  \"notificationsEnabled\": true\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/devices",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"devices"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "UserBooking",
+					"item": [
+						{
+							"name": "User_CouponCode",
+							"item": [
+								{
+									"name": "Get_Coupon_Code_List",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3001/api/users/coupons",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3001",
+											"path": [
+												"api",
+												"users",
+												"coupons"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Apply_Coupon_Code",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"couponCode\": \"FIRST50\",\n  \"orderAmount\": 550\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3001/api/users/coupons/apply",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3001",
+											"path": [
+												"api",
+												"users",
+												"coupons",
+												"apply"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "UserServiceBooking",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/users/service-booking-options?serviceId=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"service-booking-options"
+									],
+									"query": [
+										{
+											"key": "serviceId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Service_Booking_With_Selected_Vehicle",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/users/service-booking-options?serviceId=2&vehicleId=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"service-booking-options"
+									],
+									"query": [
+										{
+											"key": "serviceId",
+											"value": "2"
+										},
+										{
+											"key": "vehicleId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_User_Service_Partner_List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/users/service-partners?vehicleId=1&serviceId=2&subServiceId=6&latitude=28.6139000&longitude=77.2090000&distanceKm=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"service-partners"
+									],
+									"query": [
+										{
+											"key": "vehicleId",
+											"value": "1"
+										},
+										{
+											"key": "serviceId",
+											"value": "2"
+										},
+										{
+											"key": "subServiceId",
+											"value": "6"
+										},
+										{
+											"key": "latitude",
+											"value": "28.6139000"
+										},
+										{
+											"key": "longitude",
+											"value": "77.2090000"
+										},
+										{
+											"key": "distanceKm",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_Time_Slot_List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/users/bookings/available-slots?serviceCenterId=4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"bookings",
+										"available-slots"
+									],
+									"query": [
+										{
+											"key": "serviceCenterId",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User_Booking_Review",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceCenterId\": 4,\n  \"vehicleId\": 1,\n  \"serviceId\": 2,\n  \"subServiceId\": 6,\n  \"serviceOptionId\": 10,\n  \"bookingDate\": \"2026-10-04\",\n  \"bookingTimeSlot\": \"09:00 AM - 11:00 AM\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/users/bookings/review",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"bookings",
+										"review"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User_Booking_After_Coupon",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceCenterId\": 4,\n  \"vehicleId\": 1,\n  \"serviceId\": 2,\n  \"subServiceId\": 6,\n  \"serviceOptionId\": 10,\n  \"bookingDate\": \"2026-10-04\",\n  \"bookingTimeSlot\": \"09:00 AM - 11:00 AM\",\n  \"couponCode\": \"FIRST50\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/users/bookings/review",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"bookings",
+										"review"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User_Final_Booking",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceCenterId\": 4,\n  \"vehicleId\": 1,\n  \"serviceId\": 2,\n  \"subServiceId\": 6,\n  \"serviceOptionId\": 10,\n  \"bookingDate\": \"2026-10-04\",\n  \"bookingTimeSlot\": \"09:00 AM - 11:00 AM\",\n  \"paymentMode\": \"PAY_LATER\",\n  \"couponCode\": \"FIRST50\",\n  \"notes\": \"Please check brake cable\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/users/bookings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"bookings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_User_Booking_History",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/users/bookings?type=upcoming",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"bookings"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "upcoming"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel_User_Booking",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"reason\": \"Change of schedule\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/users/bookings/cancel?bookingId=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"bookings",
+										"cancel"
+									],
+									"query": [
+										{
+											"key": "bookingId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User Home Api's",
+					"item": [
+						{
+							"name": "Get_User_Home_Screen_Services",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer f98c8b41a3b275c244c36b4bcea72e483a717df987a4c3ea834bd9f636a7fb54",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myyaan.com/api/users/home/services",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myyaan",
+										"com"
+									],
+									"path": [
+										"api",
+										"users",
+										"home",
+										"services"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dashboard_Api's",
+			"item": [
+				{
+					"name": "Auth_Api's",
+					"item": [
+						{
+							"name": "User_Login_Api",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"admin@myyaan.com\",\n  \"password\": \"Admin@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3002/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Authenticate_Me_Api",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBteXlhYW4uY29tIiwicm9sZSI6ImFkbWluIiwicm9sZV9pZCI6MywiaWF0IjoxNzkxMTM0NTYyLCJleHAiOjE3OTE3MzkzNjJ9.lQvxO1DqhSSc8yne9Zb8Zh83X4q0wsZwn28XXCl5KGo",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3002/api/auth/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"api",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Coupon_Code_Api's",
+					"item": [
+						{
+							"name": "Get_Coupon_Code_List_Api",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBteXlhYW4uY29tIiwicm9sZSI6ImFkbWluIiwicm9sZV9pZCI6MywiaWF0IjoxNzkxMTM0NTYyLCJleHAiOjE3OTE3MzkzNjJ9.lQvxO1DqhSSc8yne9Zb8Zh83X4q0wsZwn28XXCl5KGo",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3002/api/admin/coupons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"api",
+										"admin",
+										"coupons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_All_Coupon_Summary_Api",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBteXlhYW4uY29tIiwicm9sZSI6ImFkbWluIiwicm9sZV9pZCI6MywiaWF0IjoxNzkxMTM0NTYyLCJleHAiOjE3OTE3MzkzNjJ9.lQvxO1DqhSSc8yne9Zb8Zh83X4q0wsZwn28XXCl5KGo",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3002/api/admin/coupons/stats/summary",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"api",
+										"admin",
+										"coupons",
+										"stats",
+										"summary"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single_Coupon_Data_Api",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBteXlhYW4uY29tIiwicm9sZSI6ImFkbWluIiwicm9sZV9pZCI6MywiaWF0IjoxNzkxMTM0NTYyLCJleHAiOjE3OTE3MzkzNjJ9.lQvxO1DqhSSc8yne9Zb8Zh83X4q0wsZwn28XXCl5KGo",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3002/api/admin/coupons/:6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"api",
+										"admin",
+										"coupons",
+										":6"
+									],
+									"variable": [
+										{
+											"key": "6",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
