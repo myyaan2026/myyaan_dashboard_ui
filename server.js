@@ -10,7 +10,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 const asyncRoute = handler => (req, res, next) => Promise.resolve(handler(req, res, next)).catch(next);
-const upstreamApiUrl = process.env.UPSTREAM_API_URL?.replace(/\/$/, '');
+// Defaults to the production MyYaan API so a deploy works without extra config.
+const upstreamApiUrl = (process.env.UPSTREAM_API_URL || 'https://my-yaan-dashboard-back-end.vercel.app').replace(/\/$/, '');
 
 function bearerToken(value) {
   return value && /^Bearer\s+.+/i.test(value) ? value : value ? `Bearer ${value}` : null;
@@ -86,7 +87,7 @@ app.all('/api/admin/*', asyncRoute(async (req, res) => {
   res.status(response.status).json(body);
 }));
 
-app.get('/api/integrations/status', requireAuth, (req, res) => res.json({ configured: Boolean(process.env.UPSTREAM_API_URL), baseUrl: process.env.UPSTREAM_API_URL || null }));
+app.get('/api/integrations/status', requireAuth, (req, res) => res.json({ configured: true, baseUrl: upstreamApiUrl }));
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
 app.use((err, req, res, next) => { console.error(err); res.status(err.status || 500).json({ message: err.message || 'Something went wrong. Please try again.' }); });
 app.listen(port, () => console.log(`MyYaan dashboard is running on port ${port}`));
